@@ -1,0 +1,2 @@
+# resolucion de maquinas
+

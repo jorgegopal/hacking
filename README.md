@@ -1,3 +1,2 @@
-# hacking
+# Gestores de contenido
 
-hola mundo!
