@@ -1,67 +1,92 @@
-# 🏴‍☠️ Hacking Notes & Pentesting Grimoire
+# 🛡️ Hacking Notes & Pentesting Repository
 
-![Status](https://img.shields.io/badge/Status-En%20Desarrollo-orange)
-![Cert](https://img.shields.io/badge/Focus-eJPTv2-blue)
-![Type](https://img.shields.io/badge/Type-Personal%20Knowledge%20Base-lightgrey)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen)
+![Focus](https://img.shields.io/badge/Focus-Web%20Hacking%20%26%20CTFs-blue)
+![Cert](https://img.shields.io/badge/Prep-eJPTv2-orange)
 
-Bienvenido a mi cerebro digital. Este repositorio contiene mi base de conocimiento personal sobre **Ciberseguridad, Pentesting y Red Teaming**. Aquí documento todo lo que aprendo durante mi preparación para certificaciones (como eJPTv2), resolución de CTFs y estudios autodidactas.
-
----
-
-## ⚠️ Disclaimer (Aviso Legal)
-
-> **Leer atentamente:**
-> El contenido de este "libro" es estrictamente para **fines educativos y de investigación académica**. Las técnicas aquí descritas deben ser utilizadas únicamente en entornos controlados, laboratorios propios (DockerLabs, máquinas virtuales) o en sistemas donde se cuente con **autorización explícita**.
->
-> El autor no se hace responsable del mal uso que se le pueda dar a la información aquí expuesta. **Hacking sin permiso es ilegal.**
+Bienvenido a mi repositorio personal de ciberseguridad. Este espacio contiene mis notas de estudio, hojas de trucos (cheatsheets), scripts y soluciones (writeups) de máquinas, con un fuerte enfoque en la preparación para la certificación **eJPTv2** y técnicas avanzadas de **Web Hacking**.
 
 ---
 
-## 🗺️ Mapa de Navegación
+## ⚠️ Disclaimer
 
-¿Qué estás buscando hoy?
-
-### 🔍 Fase 1: Reconocimiento & Enumeración
-Si estás empezando una máquina y necesitas encontrar vectores de ataque.
-* Ve a **[Puertos y Servicios](recon/services/README.md)** para ver cómo atacar un puerto 21, 22, 80, 445, etc.
-* Revisa **[Comandos de Red](recon/network-commands.md)** para Nmap y detección de hosts.
-
-### 🌐 Fase 2: Hacking Web
-Para auditorías de aplicaciones web (OWASP).
-* **[Vulnerabilidades](web/vulns/README.md)**: SQLi, XSS, RCE, LFI, etc.
-* **[CMS](web/cms/README.md)**: Guías específicas para WordPress, Joomla, Drupal.
-
-### ⚔️ Fase 3: Explotación & PrivEsc
-* **[Shells](exploitation/shells.md)**: Cómo generar Reverse Shells y mejorar la TTY.
-* **[Escalada de Privilegios](privesc/linux.md)**: Guías para pasar de usuario a Root/Administrator en Linux y Windows.
-
-### 🚩 Fase 4: Práctica (CTFs)
-Soluciones y Writeups de máquinas que he resuelto.
-* **[DockerLabs](writeups/dockerlabs/README.md)**: Máquinas ligeras para practicar rápido.
-* **[TryHackMe & HackTheBox](writeups/thm/README.md)**: Máquinas más complejas.
+> **Aviso Legal:**
+> Todo el contenido de este repositorio (comandos, técnicas, exploits) tiene fines exclusivamente **educativos y de formación ética**. El uso de esta información para atacar objetivos sin autorización previa es ilegal.
 
 ---
 
-## 🎯 Objetivo Actual: eJPTv2
+## 📚 Contenido del Repositorio
 
-Actualmente me encuentro preparando la certificación **eJPTv2**. Puedes seguir mi ruta de aprendizaje y notas específicas en la sección dedicada:
-👉 **[Ir a notas de eJPTv2](ejpt/roadmap.md)**
+El conocimiento está dividido en las siguientes áreas principales según mi metodología actual:
+
+### 1. 🕵️ Reconocimiento y Enumeración
+Notas detalladas sobre comandos de red, host y enumeración específica por puertos y servicios:
+* **Protocolos:** FTP (21), SSH (22), Telnet (23), SMTP (25), Web (80/443), RPC (111), SMB (135/445), Oracle (1521), MySQL (3306), RDP (3389), WinRM (5985/5986).
+* **CMS:** Enumeración de Joomla, WordPress, Drupal y Magento.
+* **Tecnologías:** Microsoft IIS, Jenkins, Tomcat, WebDAV.
+
+### 2. 🌐 Hacking Web (OWASP & Más)
+Una extensa colección de vulnerabilidades y técnicas de explotación web:
+* **Inyecciones:** SQL Injection (SQLi), NoSQL, XPath, LDAP, SSTI, CSTI, CSS Injection, Latex Injection.
+* **Fallas de Lógica y Auth:** XSS, CSRF, IDORs, Race Condition, Session Puzzling, Type Juggling, JWT Attacks, API Abuse.
+* **Archivos y Deserialización:** LFI, RFI, Abuso de subida de archivos, Deserialización (Python Pickle, etc.), XXE.
+* **Otros:** Shellshock, HTTP Request Smuggling, Prototype Pollution, Padding Oracle, GraphQL, SSRF, Open Redirect, Transferencia de Zona.
+
+### 3. ⚔️ Explotación y Acceso
+* **Shells:** Guías para Bind Shells, Reverse Shells y Forward Shells.
+* **Tratamiento de la TTY:** Estabilización de terminales.
+* **Buffer Overflow:** Metodología básica y explotación.
+* **Password Cracking:** Uso de Hashcat, John the Ripper y diccionarios.
+
+### 4. 🪜 Escalada de Privilegios
+* **Linux:** Sudo, SUID, Kernel exploits, Cronjobs y "tips curiosos".
+* **Windows:** Servicios explotados frecuentemente, Psexec, WinRM.
+
+### 5. 🧟 Post-Explotación & Pivoting
+* Técnicas de Pivoting manual y con Metasploit (usando máquinas Windows).
+* Persistencia y movimiento lateral.
 
 ---
 
-## 🛠️ Herramientas Favoritas
+## 🛠️ Arsenal de Herramientas
+Guías de uso y "CheatSheets" para las herramientas que utilizo diariamente:
 
-El arsenal que uso día a día (CheatSheets rápidos):
-| Herramienta | Uso Principal | Link |
-| :--- | :--- | :--- |
-| **Nmap** | Escaneo de red | [Ver Notas](tools/nmap.md) |
-| **Burp Suite** | Proxy Web / Intercept | [Ver Notas](tools/burpsuite.md) |
-| **Metasploit** | Framework de explotación | [Ver Notas](tools/metasploit.md) |
-| **SQLMap** | Inyección SQL automatizada | [Ver Notas](tools/sqlmap.md) |
+| Categoría | Herramientas |
+| :--- | :--- |
+| **Web Fuzzing** | `Ffuf`, `Gobuster`, `Wfuzz`, `Dirbuster` |
+| **Escaneo** | `Nmap`, `Nessus`, `Nikto` |
+| **Explotación** | `Metasploit`, `Burp Suite`, `SQLMap`, `Hydra` |
+| **Contenedores** | `Docker` |
 
 ---
 
-### ¿Encontraste un error?
-Si ves algún comando obsoleto o tienes una sugerencia, no dudes en abrir un *Issue* o contactarme.
+## 🐍 Scripting & Coding
+Notas sobre automatización y creación de herramientas propias:
+* **Python:** Formateo de cadenas, listas, operadores, scripting para deserialización.
+* **Comandos:** Referencia rápida de comandos para Linux, Windows y MySQL.
 
-*Keep Hacking!* 👨‍💻
+---
+
+## 🎓 Preparación eJPTv2
+Sección dedicada exclusivamente a la certificación **Junior Penetration Tester**:
+* Resolución de laboratorios oficiales.
+* Máquinas recomendadas para practicar.
+* Hojas de ruta de estudio.
+
+---
+
+## 🚩 CTF Writeups (Soluciones)
+Mis soluciones paso a paso para máquinas de diferentes plataformas:
+
+* **🐳 DockerLabs:** ChocolateFire, Domain, FindYourStyle, Trust, Walking CMS.
+* **🔥 TryHackMe:** VulnNet, ChillHack, Blog, Ignite, Pickle Morty, Kenobi, Vulnversity.
+* **📦 HackTheBox:** Expressway.
+* **🕷️ VulnHub:** IMF 1, Casino Royale, Infovere, Presidential, Symfonos.
+* **💻 HackMyVM:** Friendly.
+
+---
+
+### 📝 Notas
+Este repositorio está en constante evolución ("Work in Progress"). La estructura puede cambiar a medida que añado nuevas máquinas y técnicas.
+
+**Happy Hacking!** 👨‍💻
