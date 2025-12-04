@@ -1,2 +1,0 @@
-# preparacion ejptv2
-
